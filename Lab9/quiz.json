@@ -1,0 +1,33 @@
+import json
+
+quiz = {
+    'Which Hawaiian island is nicknamed "The Big Island"?': {
+        "answer": "Hawaii",
+        "choices": ["Hawaii", "Maui", "Oahu", "Kauai"]
+    },
+    'Which island is known as "The Valley Isle"?': {
+        "answer": "Maui",
+        "choices": ["Maui", "Molokai", "Lanai", "Niihau", "Kauai"]
+    },
+    'Which Hawaiian word means "thank you"?': {
+        "answer": "Mahalo",
+        "choices": ["Mahalo", "Aloha", "Ohana", "Kokua", "Pau"]
+    },
+    "What is the capital city of Hawaii?": {
+        "answer": "Honolulu",
+        "choices": ["Honolulu", "Hilo", "Kailua", "Lahaina"]
+    },
+    "Which volcano on the Big Island is one of the most active in the world?": {
+        "answer": "Kilauea",
+        "choices": ["Kilauea", "Haleakala", "Diamond Head", "Mauna Kea", "Koko Head", "Lanai Peak"]
+    },
+    "What is the Hawaiian state bird, the nene?": {
+        "answer": "A goose",
+        "choices": ["A goose", "An owl", "A crow", "A duck"]
+    }
+}
+
+with open("quiz.json", "w") as file:
+    json.dump(quiz, file, indent=4)
+
+print("Quiz saved to quiz.json")
